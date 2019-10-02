@@ -134,7 +134,7 @@ class Cart implements Countable
     {
         $result = 0;
         foreach ($this->items as $item) {
-            $result += $item->getAmountProduct();
+            $result += $item->getAmountProduct($this);
         }
         return $result;
     }

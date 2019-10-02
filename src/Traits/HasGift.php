@@ -64,7 +64,7 @@ trait HasGift
              * That's why I address him like this!
              */
             return DB::transaction(static function () use ($santa, $to, $product, $force) {
-                $amount = $product->getAmountProduct();
+                $amount = $product->getAmountProduct($santa);
                 $meta = $product->getMetaProduct();
                 $fee = app(WalletService::class)
                     ->fee($product, $amount);

@@ -17,7 +17,7 @@ interface Product extends Wallet
     /**
      * @return int
      */
-    public function getAmountProduct(): int;
+    public function getAmountProduct(Customer $customer): int;
 
     /**
      * @return array
